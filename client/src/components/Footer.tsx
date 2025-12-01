@@ -6,8 +6,9 @@ export default function Footer() {
     <footer className="border-t bg-white py-12 text-muted-foreground">
       <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-4">
         <div className="col-span-2">
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl text-foreground mb-4">
+          <Link href="/" className="flex items-center gap-3 font-bold text-xl text-foreground mb-4">
             <img src={logoImg} alt="MEGHA" className="h-10" />
+            <span>MEGHA</span>
           </Link>
           <p className="text-sm max-w-xs">
             Practical cloud consulting for small businesses in Ontario. We make cloud technology manageable and dependable.
