@@ -18,7 +18,7 @@ export default function Home() {
             />
         </div>
         <div className="container relative z-10 mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-primary mb-6 max-w-4xl">
             Practical cloud consulting for small businesses in Ontario.
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
@@ -46,23 +46,23 @@ export default function Home() {
           <ServiceCard
             title="Cloud Migration"
             description="Move your local systems to Google Cloud, AWS, or Azure with a clear roadmap and zero stress."
-            icon={<Server className="h-10 w-10" />}
+            icon={<Server className="h-10 w-10 text-primary" />}
           />
           <ServiceCard
             title="Maintenance & Support"
             description="Regular performance checks, monitoring, and fixes to keep your business running smoothly."
-            icon={<Wrench className="h-10 w-10" />}
+            icon={<Wrench className="h-10 w-10 text-primary" />}
           />
           <ServiceCard
             title="Backup & Recovery"
             description="Automated cloud backups and disaster recovery plans to ensure your data is always safe."
-            icon={<ShieldCheck className="h-10 w-10" />}
+            icon={<ShieldCheck className="h-10 w-10 text-primary" />}
           />
         </div>
       </section>
 
       {/* Why MEGHA */}
-      <section className="bg-secondary/5 py-16">
+      <section className="bg-primary/5 py-16 border-t-4 border-primary">
         <div className="container mx-auto px-4 md:px-6">
           <SectionTitle align="center">Why Choose MEGHA?</SectionTitle>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
@@ -73,11 +73,11 @@ export default function Home() {
               { title: "Reliable Security", desc: "Enterprise-grade protection for your data." },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center text-center">
-                <div className="bg-white p-4 rounded-full shadow-sm mb-4">
-                  <CheckCircle2 className="h-8 w-8 text-accent" />
+                <div className="bg-primary/10 p-4 rounded-full shadow-sm mb-4 border-2 border-primary/30">
+                  <CheckCircle2 className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.desc}</p>
+                <h3 className="font-bold text-lg text-foreground mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -86,10 +86,10 @@ export default function Home() {
 
       {/* CTA */}
       <section className="container mx-auto px-4 md:px-6">
-        <div className="bg-primary rounded-2xl p-8 md:p-16 text-center text-white shadow-xl relative overflow-hidden">
+        <div className="bg-primary rounded-2xl p-8 md:p-16 text-center shadow-xl relative overflow-hidden">
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to simplify your IT?</h2>
-            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">Ready to simplify your IT?</h2>
+            <p className="text-lg mb-8 text-white/95 max-w-2xl mx-auto drop-shadow">
               Book a free 30-minute discovery call. No pressure, just answers.
             </p>
             <Link href="/contact">

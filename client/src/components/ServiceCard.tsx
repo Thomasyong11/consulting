@@ -11,7 +11,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, icon }: ServiceCardProps) {
   return (
-    <Card className="h-full flex flex-col hover:shadow-lg transition-shadow duration-300 border-none shadow-sm">
+    <Card className="h-full flex flex-col hover:shadow-lg transition-all duration-300 border-none shadow-sm hover:border-l-4 hover:border-l-primary">
       <CardHeader>
         {icon && <div className="mb-4 text-primary">{icon}</div>}
         <CardTitle className="text-xl font-bold text-foreground">{title}</CardTitle>
