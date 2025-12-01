@@ -1,5 +1,5 @@
-import { Cloud } from "lucide-react";
 import { Link } from "wouter";
+import logoImg from "@assets/megha_1764550888105.png";
 
 export default function Footer() {
   return (
@@ -7,8 +7,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-4">
         <div className="col-span-2">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl text-foreground mb-4">
-            <Cloud className="h-6 w-6 text-primary fill-current" />
-            MEGHA
+            <img src={logoImg} alt="MEGHA" className="h-10" />
           </Link>
           <p className="text-sm max-w-xs">
             Practical cloud consulting for small businesses in Ontario. We make cloud technology manageable and dependable.
