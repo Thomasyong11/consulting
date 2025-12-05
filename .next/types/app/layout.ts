@@ -1,4 +1,4 @@
-// File: /home/runner/workspace/app/layout.js
+// File: C:\Users\TJ\Downloads\ReactConsultingWebsite (1)\ReactConsultingWebsite\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

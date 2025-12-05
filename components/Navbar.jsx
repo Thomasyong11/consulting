@@ -28,7 +28,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
           {/* <Cloud className="h-8 w-8 text-primary fill-current" /> */}
           <img 
-    src="/megha.png" 
+    src="/assets/megha.png" 
     alt="MEGHA Logo" 
     className="h-8 w-auto"
   />

@@ -7,7 +7,12 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6 grid gap-12 md:grid-cols-4">
         <div className="col-span-1 md:col-span-2 pr-8">
           <Link href="/" className="flex items-center gap-2 text-white font-bold text-2xl mb-6">
-            <Cloud className="h-8 w-8 text-primary fill-current" />
+            {/* <Cloud className="h-8 w-8 text-primary fill-current" /> */}
+              <img 
+    src="/assets/megha.png" 
+    alt="MEGHA Logo" 
+    className="h-8 w-auto"
+  />
             <span>MEGHA</span>
           </Link>
           <p className="text-slate-400 leading-relaxed mb-8 max-w-md">
