@@ -1,0 +1,195 @@
+I want you to create a **production ready React website** for my consulting practice and set it up so I can deploy it on **Vercel with no extra configuration**.
+
+Use **Next.js (latest 14, App Router)** with **JavaScript (not TypeScript)** and **Tailwind CSS** for styling.
+
+⚠️ Very important:
+- Do NOT use any custom servers.
+- Do NOT create any API routes.
+- Do NOT use server actions or anything that complicates static hosting.
+- Everything should be done with static pages and simple client-side logic only (for example, for the contact form and blog, just use local state / imports).
+
+---
+
+## Brand
+
+Business name: **MEGHA Cloud Consulting** (short form: MEGHA)
+
+Tagline:  
+“Practical cloud consulting for small businesses in Ontario.”
+
+Practice description:  
+MEGHA is a freelance cloud consulting company that offers small businesses and entrepreneurs in Ontario cost effective and practical cloud solutions. The focus is on helping clients move to the cloud, improve performance, and keep systems reliable, without needing a full time in house IT team. The goal is to make cloud technology manageable, dependable, and accessible so owners can focus on growing their business instead of technical problems.
+
+Write all copy in clear, simple, Canadian English. Sound like a friendly, professional solo consultant, not a big corporate agency.
+
+---
+
+## Services
+
+Create content and layout for these 3 core services:
+
+1. **Cloud migration and optimization**  
+   - Helps small businesses move from older or local systems to cloud platforms like Google Cloud, AWS, or Microsoft Azure.  
+   - Includes: assessment of existing workloads, migration roadmap, execution, performance and cost optimization.  
+   - Deliverable: a clear migration roadmap and a post migration performance report.
+
+2. **Cloud maintenance and support package**  
+   - Short term “mini project” for businesses that cannot afford a full time IT staff.  
+   - Includes: regular performance checks, monitoring, troubleshooting, and small fixes to keep things secure and efficient.  
+   - Deliverable: a simple summary of maintenance activities and key performance indicators.
+
+3. **Data backup and disaster recovery**  
+   - Focuses on setting up automated cloud based backups and recovery plans so important business data is safe.  
+   - Includes: backup strategy, configuration, testing of recovery.  
+   - Deliverable: a fully configured backup and recovery setup plus a short testing summary.
+
+---
+
+## Brand identity and styling
+
+Use this **colour palette**:
+
+- Main brand colour: soft **green** (for trust, clarity, innovation)  
+  Example: `#2ECC71`  
+- Secondary colour: **steel grey** (for balance and reliability)  
+  Example: `#6C7A89`  
+- Tertiary accent: deeper **emerald green** for highlights  
+  Example: `#1E8449`  
+- Text colour: **charcoal black**  
+  Example: `#222222`  
+- Background: **white smoke**  
+  Example: `#F5F5F5`
+
+Design rules:
+- Clean, modern, minimal.
+- Use a simple sans serif font like **Montserrat** (via Google Fonts) or something very similar.
+- Plenty of white space.
+- Rounded cards, soft shadows, and smooth hover effects on buttons and links.
+- Fully responsive on mobile, tablet, and desktop.
+
+Logo:
+- Use a simple text logo in the header: `MEGHA` in uppercase, using the main green and steel grey.
+- You can add a minimal cloud icon next to the wordmark using Tailwind or a small inline SVG.
+
+---
+
+## Technical requirements
+
+- Use **Next.js App Router** with an `/app` directory.
+- Use **Tailwind CSS** configured in the standard way for Next.js.
+- Do NOT use a custom server. Use the default Next.js setup compatible with Vercel.
+- Do NOT create any API routes (no `/api` folder or `route.js` handlers).
+- Do NOT use server actions.
+- Only use libraries that work on Vercel with no extra setup.
+- Add basic SEO: set page titles and meta descriptions for each main page.
+
+`package.json` scripts should include at least:
+- `"dev": "next dev"`
+- `"build": "next build"`
+- `"start": "next start"`
+
+---
+
+## Overall structure
+
+Use this structure under `/app`:
+
+- `/app/layout.js`  
+  - Global layout with `<html>`, `<body>`, header, footer, and Tailwind setup.
+  - Header with logo on the left and navigation links on the right: **Home, Services, About, Blog, Contact**.
+  - Make the nav mobile friendly (hamburger menu on small screens).
+  - Footer with business info.
+
+- `/app/page.js` – **Home page**  
+  Sections:
+  1. **Hero**  
+     - Headline: “Practical cloud consulting for small businesses in Ontario.”  
+     - Short subtext about helping small businesses move to and manage the cloud without a full time IT team.  
+     - Two buttons:  
+       - “View services” (scrolls to the services section on the home page)  
+       - “Book a free consult” (links to the Contact page).
+  2. **Services preview**  
+     - 3 cards, one for each service above, with short descriptions and a “Learn more” link to the Services page.
+  3. **Why MEGHA**  
+     - A grid or list of 3–4 points, for example:  
+       - Focused on small businesses  
+       - No unnecessary jargon  
+       - Flexible, project based support  
+       - Reliable and secure setups  
+  4. **Blog highlight**  
+     - A card that previews the main blog post with title and a short teaser, linking to the Blog page.
+  5. **Call to action**  
+     - A banner inviting visitors to contact MEGHA for a free 30 minute discovery call.
+
+- `/app/services/page.js` – **Services page**  
+  - Expand the 3 services with more detail:
+    - What the service is  
+    - Who it is for  
+    - What is included  
+    - What the client receives at the end  
+  - Use nice cards or sections with simple visual elements.
+  - Add a small FAQ section at the bottom with 3–4 common questions, such as:
+    - “Do I need to already be using the cloud?”
+    - “Can you work remotely?”
+    - “How long does a migration usually take?”
+    - “Can we start with a small project first?”
+  - End with a “Ready to talk?” area that links to the Contact page.
+
+- `/app/about/page.js` – **About page**  
+  - A clear mission statement, for example:  
+    “MEGHA helps small business owners make sense of the cloud so they can stay focused on running and growing their business. The practice focuses on simple explanations, practical advice, and setups that are safe and reliable.”
+  - A short “About the consultant” section with placeholder text for:
+    - My name  
+    - My background in cloud data management  
+    - Experience with Azure, AWS, and Microsoft tools.
+  - A list or small timeline of values such as:
+    - Clarity  
+    - Reliability  
+    - Security  
+    - Respect for your time  
+
+- `/app/contact/page.js` – **Contact page**  
+  - A friendly intro paragraph inviting people to book a free consult or ask a question.
+  - A contact form with these fields:
+    - Name (text, required)
+    - Email (email, required)
+    - Company name (optional)
+    - What are you looking for? (dropdown with the 3 services plus “Not sure yet”)
+    - Message (textarea, required)
+  - Form behaviour:
+    - Use simple client-side validation (e.g., check required fields).
+    - On submit, **do NOT** call any API route.
+    - Just simulate a submit:
+      - Prevent default.
+      - Log the form data in `console.log`.
+      - Show a success message like “Thanks! I’ll get back to you soon.”  
+      - Clear the form.
+    - No network requests needed. Everything is front-end only.
+
+---
+
+## Blog setup using JSON (no server calls)
+
+All blog content must be loaded from a **local JSON file** so there is no server side work. The site should import this JSON directly.
+
+1. Create a folder:  
+   `/content`
+
+2. Inside it, create a file:  
+   `/content/blog.json`
+
+3. Store blog posts in `blog.json` as an array of objects with at least:
+   - `slug` (string)
+   - `title` (string)
+   - `excerpt` (short string for previews)
+   - `content` (array of strings, each string is a paragraph or heading, in order)
+
+4. Use **exact imports** like:
+   ```js
+   import posts from "@/content/blog.json";
+
+
+## Final Details
+
+- Add a **Blog** link in the main navigation alongside Home, Services, About, and Contact. This will lead to the blog index page that lists all blog posts.
+- Ensure the entire website is fully **serverless** and works perfectly on Vercel with no backend code.
